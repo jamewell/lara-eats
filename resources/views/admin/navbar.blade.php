@@ -14,7 +14,7 @@
 
 <!-- Nav Item - Users -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{ url('/users') }}">
         <i class="fa fa-users"></i>
         <span>{{ __('Users') }}</span>
     </a>
