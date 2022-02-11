@@ -19,4 +19,8 @@ class HomeController extends Controller
             $this->index();
         }
     }
+
+    public function menu(){
+        return view("home.menu");
+    }
 }
