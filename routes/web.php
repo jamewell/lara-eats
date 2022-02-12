@@ -19,7 +19,10 @@ Route::get('/redirects', [HomeController::class, "redirects"]);
 Route::get('/menu', [HomeController::class, "menu"]);
 
 Route::get('/users', [AdminController::class, "user"]);
+Route::get('/foodmenu', [AdminController::class, "foodmenu"]);
 Route::get('/deleteUser/{id}', [AdminController::class, "deleteUser"]);
+
+Route::post('/uploadfood', [AdminController::class, "upload"]);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

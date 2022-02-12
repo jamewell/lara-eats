@@ -13,7 +13,7 @@
 <hr class="sidebar-divider my-0">
 
 <!-- Nav Item - Users -->
-<li class="nav-item active">
+<li class="nav-item">
     <a class="nav-link" href="{{ url('/users') }}">
         <i class="fa fa-users"></i>
         <span>{{ __('Users') }}</span>
@@ -25,8 +25,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseTwo">
+    <a class="nav-link" href="{{ url('/foodmenu') }}">
         <i class="fa fa-utensils"></i>
         <span>{{ __('Foods') }}</span>
     </a>
@@ -59,8 +58,7 @@
 
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-        aria-expanded="true" aria-controls="collapseTwo">
+    <a class="nav-link collapsed" href="#">
         <i class="fa fa-calendar-alt"></i>
         <span>{{ __('Reservation') }}</span>
     </a>
