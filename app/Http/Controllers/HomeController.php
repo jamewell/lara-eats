@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foods;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,6 +22,7 @@ class HomeController extends Controller
     }
 
     public function menu(){
-        return view("home.menu");
+        $data = Foods::all();
+        return view("home.menu", compact("data"));
     }
 }
