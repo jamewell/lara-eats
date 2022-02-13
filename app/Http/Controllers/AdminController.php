@@ -35,6 +35,28 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function updateMenuitem($id){
+        $data = foods::find($id);
+        return view('admin.editfood', compact("data"));
+    }
+
+    public function updatefood(Request $request, $id){
+        $data = foods::find($id);
+        $image = $request->image;
+
+        $imageName = time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('foodimage', $imageName);
+        
+        $data->image = $imageName;
+        $data->title = $request->title;
+        $data->price = $request->price;
+        $data->description = $request->description;
+        $data->type = $request->type;
+        $data->save();
+
+        return redirect()->back();
+    }
+
     public function deleteUser($id){
         $data = user::find($id);
         $data->delete();

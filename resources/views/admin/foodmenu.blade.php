@@ -320,8 +320,11 @@
                                                     <img src="/foodimage/{{ $item->image }}" class="img-thumbnail" alt="">
                                                 </td>
                                                 <td>
-                                                    <a href="{{ url('/deleteMenuitem', $item->id) }}">
-                                                        <i class="fa fa-trash align-middle"></i>
+                                                    <a href="{{ url('/deleteMenuitem', $item->id) }}" class="align-middle">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                    <a href="{{ url('/updateMenuitem', $item->id) }}" class="align-middle">
+                                                        <i class="fa fa-edit"></i>
                                                     </a>
                                                 </td>
                                             </tr>
